@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAiBALi Clothing Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h1>FAiBALi</h1>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="store-layout">
+    <!-- Sidebar Menu -->
+    <aside class="sidebar">
+      <ul class="category-list">
+        <li><a href="#shirts">Shirts</a></li>
+        <li><a href="#hoodies">Hoodies</a></li>
+        <li><a href="#pants">Pants</a></li>
+      </ul>
+    </aside>
+
+    <!-- Visual Divider Line -->
+    <div class="sidebar-divider-visual"></div>
+
+    <!-- Product Area -->
+    <section class="product-area">
+     <div id="shirts" class="product-category">
+  <h2>Shirts</h2>
+  <div class="product-list">
+    <div class="product fade-in">
+      <img src="side swap tee.png" alt="SIDEPUNCH TEE">
+      <h3>SIDEPUNCH TEE</h3>
+      <p>$25.00</p>
+      <button class="add-to-cart"
+        data-name="SIDEPUNCH TEE"
+        data-price="25.00"
+        data-image="side swap tee.png">
+        ADD TO CART
+      </button>
+    </div>
+
+    <!-- New Shirt #1 (Disabled) -->
+    <div class="product fade-in">
+      <img src="COMINGSOON.png" alt="TBA" class="coming-soon">
+      <h3>TBA</h3>
+      <p>$???</p>
+      <button class="add-to-cart disabled-button" disabled>
+        COMING SOON
+      </button>
+    </div>
+
+    <!-- New Shirt #2 (Disabled) -->
+    <div class="product fade-in">
+      <img src="COMINGSOON.png" alt="TBA" class="coming-soon">
+      <h3>TBA</h3>
+      <p>$???</p>
+      <button class="add-to-cart disabled-button" disabled>
+        COMING SOON
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+
+      <div id="hoodies" class="product-category">
+        <h2>Hoodies</h2>
+        <div class="product-list">
+          <div class="product fade-in">
+            <img src="alice pack hoodie.png" alt="ALICEPACK HOODIE">
+            <h3>ALICEPACK HOODIE</h3>
+            <p>$39.99</p>
+            <button class="add-to-cart"
+              data-name="ALICEPACK HOODIE"
+              data-price="39.99"
+              data-image="alice pack hoodie.png">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="pants" class="product-category">
+        <h2>Pants</h2>
+        <div class="product-list">
+          <!-- Add pants here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <button id="close-cart" class="close-cart">X</button>
+      <h2>Your Cart</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-actions">
+        <button id="clear-cart">Clear Cart</button>
+        <button id="request-order">Request Order</button>
+      </div>
+      <p id="cart-total"></p>
+    </div>
+  </div>
+
+  <!-- Floating View Cart Button -->
+  <button id="view-cart-top" class="floating-cart-btn">View Cart</button>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Scroll to Top">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="cart-footer">
+      <p>&copy; 2025 FAiBALi</p>
+    </div>
+  </footer>
+
+  <!-- Image Preview Modal -->
+  <div id="preview-modal" class="cart-modal">
+    <div class="cart-content" style="max-width: 600px;">
+      <button id="close-preview" class="close-cart">X</button>
+      <img id="preview-image" src="" alt="Preview" style="width:100%; border-radius: 8px; object-fit: cover; max-height: 80vh;">
+      <h3 id="preview-title" style="margin-top: 15px;"></h3>
+    </div>
+  </div>
+
+  <!-- PayPal Modal -->
+  <div id="paypal-modal" class="cart-modal" style="display:none;">
+    <div class="cart-content" style="max-width: 500px;">
+      <button id="close-paypal" class="close-cart">×</button>
+      <h2>Checkout with PayPal</h2>
+      <div id="paypal-button-container" style="margin-top: 20px;"></div>
+    </div>
+  </div>
+
+<!-- Image Preview Modal -->
+<div id="image-preview-modal">
+  <span id="close-image-modal">&times;</span>
+  <div class="modal-image-container">
+    <img id="preview-image" src="" alt="Preview">
+  </div>
+</div>
+
+<!-- Size Selection Modal -->
+<div id="size-modal" class="modal-overlay no-bg">
+  <div class="size-options">
+    <button class="size-option" data-size="S">S</button>
+    <button class="size-option" data-size="M">M</button>
+    <button class="size-option" data-size="L">L</button>
+    <button class="size-option" data-size="XL">XL</button>
+  </div>
+  <button id="close-size-modal" class="close-cart" style="position: absolute; top: 40px; right: 50px;">×</button>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
